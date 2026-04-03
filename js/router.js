@@ -10,7 +10,7 @@ function navigate(page) {
   $$('.nav-btn').forEach(b => b.classList.remove('active'));
 
   $(`#page-${page}`).classList.add('active');
-  $(`.nav-btn[data-page="${page}"]`).classList.add('active');
+  $(`.nav-btn[data-page="${page}"]`)?.classList.add('active');
 
   $('#header-subtitle').textContent = PAGE_LABELS[page] || '';
 
