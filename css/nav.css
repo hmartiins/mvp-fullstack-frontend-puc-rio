@@ -47,22 +47,6 @@
   height: 22px;
 }
 
-/* add button — prominent gradient pill */
-.nav-btn-add {
-  background: linear-gradient(135deg, var(--violet), #5b21b6);
-  border-radius: 16px;
-  color: #fff !important;
-  padding: .6rem 1rem;
-  margin: 0 .25rem;
-  box-shadow: 0 4px 16px rgba(124,58,237,.5);
-  transition: transform .2s, box-shadow .2s;
-}
-.nav-btn-add:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(124,58,237,.65);
-  background: linear-gradient(135deg, var(--violet), #5b21b6) !important;
-}
-
 /* center nav on wider screens */
 @media (min-width: 640px) {
   .bottom-nav {

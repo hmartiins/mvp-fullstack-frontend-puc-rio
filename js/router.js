@@ -14,6 +14,8 @@ function navigate(page) {
 
   $('#header-subtitle').textContent = PAGE_LABELS[page] || '';
 
+  $('#fab').classList.toggle('active', page === 'nova');
+
   if (page === 'dashboard')  loadDashboard();
   if (page === 'despesas')   loadDespesas();
   if (page === 'categorias') loadCategorias();
@@ -24,4 +26,5 @@ $$('.nav-btn').forEach(btn => {
   btn.addEventListener('click', () => navigate(btn.dataset.page));
 });
 
+$('#fab').addEventListener('click', () => navigate('nova'));
 $('#dash-see-all').addEventListener('click', () => navigate('despesas'));
