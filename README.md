@@ -1,4 +1,6 @@
-# Meu Financeiro — Frontend
+<h1 style="display: flex; align-items: center; gap: 20px;">
+<img src=".github/assets/logo-puc-rio.png" alt="PUC-Rio" height="80" align="middle"/> Controle de Gastos Pessoais — FrontEnd
+</h1>
 
 SPA (Single Page Application) de controle de gastos pessoais, desenvolvida com HTML, CSS e JavaScript puro (sem frameworks SPA). Interface mobile-first que consome todos os endpoints da [controle-gastos-api](https://github.com/hmartiins/mvp-fullstack-backend-puc-rio).
 
