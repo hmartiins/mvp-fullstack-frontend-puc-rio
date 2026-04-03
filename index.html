@@ -43,21 +43,26 @@
         <p id="dash-period" class="hero-period"></p>
       </div>
 
-      <!-- category breakdown -->
-      <div class="section-header">
-        <h2 class="section-title">Por categoria</h2>
-        <button class="btn-link" id="dash-see-all" data-page="despesas">Ver todas</button>
-      </div>
-      <div id="dash-resumo" class="resumo-list">
-        <p class="empty-state">Carregando&hellip;</p>
-      </div>
+      <!-- two-column grid on desktop -->
+      <div class="dash-grid">
+        <div class="dash-col">
+          <div class="section-header">
+            <h2 class="section-title">Por categoria</h2>
+            <button class="btn-link" id="dash-see-all" data-page="despesas">Ver todas</button>
+          </div>
+          <div id="dash-resumo" class="resumo-list">
+            <p class="empty-state">Carregando&hellip;</p>
+          </div>
+        </div>
 
-      <!-- recent expenses -->
-      <div class="section-header mt-3">
-        <h2 class="section-title">Recentes</h2>
-      </div>
-      <div id="dash-recent" class="cards-list">
-        <p class="empty-state">Carregando&hellip;</p>
+        <div class="dash-col">
+          <div class="section-header">
+            <h2 class="section-title">Recentes</h2>
+          </div>
+          <div id="dash-recent" class="cards-list">
+            <p class="empty-state">Carregando&hellip;</p>
+          </div>
+        </div>
       </div>
 
     </section>
@@ -174,8 +179,13 @@
     </svg>
   </button>
 
-  <!-- ===== BOTTOM NAV ===== -->
+  <!-- ===== BOTTOM NAV/ SIDE BAR ===== -->
   <nav class="bottom-nav">
+    <!-- brand visible only on desktop sidebar -->
+    <div class="nav-brand">
+      <span class="brand-icon">&#9783;</span>
+      <span class="brand-name">Meu Financeiro</span>
+    </div>
     <button class="nav-btn active" data-page="dashboard">
       <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <rect x="3" y="3" width="7" height="7" rx="1"/>

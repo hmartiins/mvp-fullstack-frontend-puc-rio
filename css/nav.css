@@ -1,3 +1,13 @@
+/* ============================================================
+   nav.css — bottom navigation (mobile) / left sidebar (desktop)
+   ============================================================ */
+
+/* ---------- brand (desktop sidebar only) ---------- */
+.nav-brand {
+  display: none; /* hidden on mobile */
+}
+
+/* ---------- bottom nav — mobile ---------- */
 .bottom-nav {
   position: fixed;
   bottom: 0; left: 0; right: 0;
@@ -37,7 +47,7 @@
 
 .nav-btn.active { color: var(--violet-lt); }
 
-.nav-btn:hover:not(.nav-btn-add) {
+.nav-btn:hover {
   color: var(--text-muted);
   background: rgba(124,58,237,.08);
 }
@@ -45,10 +55,11 @@
 .nav-icon {
   width: 22px;
   height: 22px;
+  flex-shrink: 0;
 }
 
-/* center nav on wider screens */
-@media (min-width: 640px) {
+/* tablet: center the bottom pill (640–767px) */
+@media (min-width: 640px) and (max-width: 767px) {
   .bottom-nav {
     max-width: 480px;
     left: 50%;
@@ -56,5 +67,83 @@
     border-radius: var(--radius-lg) var(--radius-lg) 0 0;
     border: 1px solid var(--border);
     border-bottom: none;
+  }
+}
+
+/* ============================================================
+   DESKTOP — left sidebar (≥ 768px)
+   ============================================================ */
+@media (min-width: 768px) {
+  .bottom-nav {
+    top: 0; left: 0; bottom: 0; right: auto;
+    width: var(--sidebar-w);
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 1.5rem .75rem 2rem;
+    gap: .25rem;
+    border-top: none;
+    border-right: 1px solid var(--border);
+    border-radius: 0;
+    transform: none;
+    max-width: none;
+  }
+
+  /* brand at the top of sidebar */
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: .25rem .5rem 1.25rem;
+    margin-bottom: .25rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-brand .brand-icon {
+    font-size: 1.3rem;
+    color: var(--violet-lt);
+  }
+
+  .nav-brand .brand-name {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: -.4px;
+    background: linear-gradient(135deg, var(--violet-lt), var(--cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* nav items — horizontal with icon + label */
+  .nav-btn {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: .85rem;
+    padding: .7rem 1rem;
+    min-width: unset;
+    border-radius: var(--radius-sm);
+    width: 100%;
+  }
+
+  .nav-btn span {
+    font-size: .88rem;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+
+  .nav-btn.active {
+    background: rgba(124,58,237,.15);
+    color: var(--violet-lt);
+  }
+
+  .nav-btn:hover {
+    background: rgba(124,58,237,.08);
+    color: var(--text-muted);
+  }
+
+  .nav-btn.active:hover {
+    color: var(--violet-lt);
   }
 }

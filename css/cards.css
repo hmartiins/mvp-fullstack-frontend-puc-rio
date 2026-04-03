@@ -1,7 +1,15 @@
 .cards-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: .7rem;
+}
+
+@media (min-width: 768px) {
+  /* expense list and category list become 2-column grids */
+  #despesas-list,
+  #cat-list {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 /* ---------- expense card ---------- */

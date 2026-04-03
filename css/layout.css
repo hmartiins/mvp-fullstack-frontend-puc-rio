@@ -1,3 +1,7 @@
+/* ============================================================
+   layout.css — header, main content area, page transitions
+   ============================================================ */
+
 /* ---------- header ---------- */
 .app-header {
   position: fixed;
@@ -69,12 +73,9 @@
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ---------- responsive ---------- */
-@media (min-width: 480px) {
-  .main-content { padding-left: 1.5rem; padding-right: 1.5rem; }
-}
-
-@media (min-width: 640px) {
+/* ---------- tablet (640–767px) ---------- */
+@media (min-width: 640px) and (max-width: 767px) {
+  /* background strip to hide content behind the floating pill nav */
   body::after {
     content: '';
     display: block;
@@ -83,5 +84,46 @@
     height: var(--nav-h);
     background: var(--bg);
     z-index: 99;
+  }
+}
+
+/* ============================================================
+   DESKTOP (≥ 768px)
+   ============================================================ */
+@media (min-width: 768px) {
+  /* header sits to the right of the sidebar */
+  .app-header {
+    left: var(--sidebar-w);
+  }
+
+  /* hide the mobile brand from header (sidebar has its own) */
+  .app-header .brand {
+    display: none;
+  }
+
+  .header-inner {
+    max-width: none;
+    padding: 0 2rem;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  /* main content area to the right of sidebar */
+  .main-content {
+    max-width: none;
+    margin-left: var(--sidebar-w);
+    padding: calc(var(--header-h) + 1.5rem) 2.5rem 2.5rem;
+  }
+
+  /* constrain inner content width */
+  .page {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .main-content {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
   }
 }

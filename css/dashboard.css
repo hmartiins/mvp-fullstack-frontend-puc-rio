@@ -55,6 +55,24 @@
   .hero-amount { font-size: 3rem; }
 }
 
+/* ---------- dashboard two-column grid ---------- */
+.dash-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.dash-col { min-width: 0; }
+
+@media (min-width: 768px) {
+  .dash-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+}
+
 /* ---------- section header ---------- */
 .section-header {
   display: flex;

@@ -37,6 +37,13 @@
   padding: 2rem 1rem;
 }
 
+@media (min-width: 768px) {
+  .fab {
+    bottom: 2rem;
+    right: 2.5rem;
+  }
+}
+
 /* ---------- toast notification ---------- */
 .toast-msg {
   position: fixed;
@@ -64,3 +71,10 @@
 
 .toast-msg.success { border-color: var(--emerald); color: var(--emerald); }
 .toast-msg.error   { border-color: var(--rose);    color: var(--rose); }
+
+@media (min-width: 768px) {
+  .toast-msg {
+    bottom: 2rem;
+    left: calc(var(--sidebar-w) + 50%);
+  }
+}
