@@ -1,0 +1,85 @@
+.filter-card,
+.add-card,
+.form-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.filter-title,
+.add-card-title,
+.form-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+/* ---------- groups & labels ---------- */
+.form-group {
+  margin-bottom: .85rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin-bottom: .35rem;
+}
+
+/* ---------- input ---------- */
+.input-field {
+  width: 100%;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-size: .9rem;
+  padding: .6rem .8rem;
+  outline: none;
+  transition: border-color .2s;
+  -webkit-appearance: none;
+}
+.input-field:focus { border-color: var(--violet); }
+.input-field option { background: var(--surface); }
+
+/* date picker icon on dark background */
+::-webkit-calendar-picker-indicator {
+  filter: invert(1) brightness(.6);
+  cursor: pointer;
+}
+
+/* ---------- filter layout ---------- */
+.filter-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .75rem;
+}
+
+.filter-group label {
+  font-size: .75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  display: block;
+  margin-bottom: .3rem;
+}
+
+.filter-actions {
+  display: flex;
+  gap: .6rem;
+  margin-top: .75rem;
+}
+
+/* ---------- two-column row (valor + data) ---------- */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .75rem;
+}
